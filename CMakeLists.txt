@@ -16,4 +16,15 @@ target_sources(crepllib PRIVATE
 
 target_link_libraries(crepl PRIVATE crepllib ${OPENGL_LIBRARIES})
 
+# tests
 
+add_executable(test_ascii)
+
+target_sources(test_ascii PRIVATE
+    test_ascii.c
+    ascii.c
+)
+
+add_test(NAME test_ascii COMMAND test_ascii) 
+
+enable_testing()

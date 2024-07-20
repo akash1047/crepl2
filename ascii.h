@@ -8,6 +8,7 @@ int ascii_lower(int c);
 int ascii_digit(int c);
 int ascii_hex(int c);
 int ascii_oct(int c);
+int ascii_bin(int c);
 char ascii_to_lower(char c);
 char ascii_to_upper(char c);
 
