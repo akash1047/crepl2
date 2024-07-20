@@ -1,0 +1,65 @@
+#ifndef CREPL_TOKEN_H
+#define CREPL_TOKEN_H
+enum {
+    // MISC
+    TOKEN_ILLEGAL,
+    TOKEN_EOF,
+
+    // DataType
+    TOKEN_IDENT,
+    TOKEN_INT,
+    TOKEN_FLOAT,
+    TOKEN_CHAR,
+    TOKEN_STRING,
+
+    // Keyworkd
+    TOKEN_KW_AUTO,
+
+    // PreProcessor
+    TOKEN_HASH_IF,
+
+    // increment-decrement
+    TOKEN_INCREMENT_PRE,
+    TOKEN_INCREMENT_POST,
+    TOKEN_DECREMENT_PRE,
+    TOKEN_DECREMENT_POST,
+
+    // Arithmetic
+    TOKEN_ADD,
+    TOKEN_SUB,
+    TOKEN_DIV,
+    TOKEN_REM,
+    TOKEN_COMPLEMENT,
+    TOKEN_AND,
+    TOKKEN_OR,
+    TOKEN_XOR,
+    TOKEN_LEFT_SHIFT,
+    TOKEN_RIGHT_SHIFT,
+    TOKEN_LEFT_SHIFT,
+
+    // Logical
+    TOKEN_LOGIC_NOT,
+    TOKEN_LOGIC_AND,
+    TOKEN_LOGIC_OR,
+
+    // Comparision
+    TOKEN_EQUAL,
+    TOKEN_NOTEQUAL,
+    TOKEN_GREATER_THAN,
+    TOKEN_GREATER_EQUAL,
+    TOKEN_LESS_THAN,
+    TOKEN_LESS_EQUAL,
+
+    // Assignment
+    TOKEN_ADD_ASSIGN,
+    TOKEN_SUB_ASSIGN,
+    TOKEN_STAR_ASSIGN,
+    TOKEN_DIV_ASSIGN,
+    TOKEN_REM_ASSIGN,
+    TOKEN_AND_ASSIGN,
+    TOKEN_OR_ASSIGN,
+    TOKEN_XOR_ASSIGN,
+    TOKEN_LEFT_SHIFT_ASSIGN,
+    TOKEN_RIGHT_SHIFT_ASSIGN,
+};
+#endif // CREPL_TOKEN_H
