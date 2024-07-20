@@ -1,7 +1,8 @@
-#include "repl.h"
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+void repl_start(FILE *input, FILE *output, FILE *error);
 
 int main() {
     repl_start(stdin, stdout, stderr);

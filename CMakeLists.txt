@@ -27,4 +27,14 @@ target_sources(test_ascii PRIVATE
 
 add_test(NAME test_ascii COMMAND test_ascii) 
 
+add_executable(test_token)
+
+target_sources(test_token PRIVATE
+    test_token.c
+    token.c
+)
+
+add_test(NAME test_token COMMAND test_token)
+
+
 enable_testing()
