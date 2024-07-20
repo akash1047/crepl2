@@ -1,6 +1,8 @@
 #ifndef CREPL_TOKEN_H
 #define CREPL_TOKEN_H
 
+#include <stddef.h>
+
 typedef enum {
     TOKEN_ILLEGAL,
     TOKEN_EOF,
@@ -127,7 +129,12 @@ typedef enum {
 
 const char *token_string(Token token);
 
-struct Literal {
+typedef struct {
+    char *ptr;
+    size_t size;
+} String;
+
+typedef struct {
     enum {
         CHAR,
         CHAR2,
@@ -135,15 +142,12 @@ struct Literal {
         STRING,
     } type;
 
-    union {
+    union Value {
         char c;
         char c2[2];
         char c3[3];
-        struct String {
-            char *ptr;
-            int len;
-        } s;
+        String s;
     };
-};
+} Literal;
 
 #endif // CREPL_TOKEN_H

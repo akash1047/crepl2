@@ -2,11 +2,15 @@
 #define CREPL_PARSER_H
 
 #include "ast.h"
+#include "scanner.h"
 #include "token.h"
 
-struct Parser {
-    Token token;
-    struct Literal literal;
-};
+typedef struct {
+    Scanner *sc;
+
+    // lookahad
+    Token tok;
+    Literal lit;
+} Parser;
 
 #endif // CREPL_PARSER_H

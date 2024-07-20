@@ -15,10 +15,9 @@ struct Expr {
     } tag;
 
     union {
-        struct Literal {
-            int type; // token type
-            char *value;
-            size_t value_len;
+        struct BasicLiteral {
+            Token type; // token type
+            struct Literal *lit;
         } literal;
 
         struct Unary {
@@ -33,8 +32,7 @@ struct Expr {
         } binary;
 
         struct Ident {
-            char *name;
-            size_t len;
+            String name;
         } ident;
     };
 } Expr;

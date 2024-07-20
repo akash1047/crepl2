@@ -14,7 +14,7 @@ target_sources(crepllib PRIVATE
     crepl.c
 )
 
-target_link_libraries(crepl PRIVATE crepllib ${OPENGL_LIBRARIES})
+target_link_libraries(crepl PRIVATE crepllib)
 
 # tests
 
@@ -35,6 +35,5 @@ target_sources(test_token PRIVATE
 )
 
 add_test(NAME test_token COMMAND test_token)
-
 
 enable_testing()
