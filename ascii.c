@@ -139,3 +139,14 @@ static int ASCII_TABLE[128] = {
     0,                       // ~ - Tilde
     0,                       // DEL - Delete
 };
+
+int ascii_space(int c) { return ASCII_TABLE[c] & SPACE; }
+int ascii_alpha(int c) { return ASCII_TABLE[c] & ALPHA; }
+int ascii_upper(int c) { return ASCII_TABLE[c] & UPPER; }
+int ascii_lower(int c) { return ASCII_TABLE[c] & LOWER; }
+int ascii_digit(int c) { return ASCII_TABLE[c] & DIGIT; }
+int ascii_hex(int c) { return ASCII_TABLE[c] & HEX; }
+int ascii_oct(int c) { return ASCII_TABLE[c] & OCT; }
+int ascii_bin(int c) { return ASCII_TABLE[c] & BIN; }
+char ascii_to_lower(char c) { return ascii_upper(c) ? c | 0x20 : c; }
+char ascii_to_upper(char c) { return ascii_lower(c) ? c & 0xDF : c; }

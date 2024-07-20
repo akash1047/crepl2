@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void expect_ch(char expected, char actual) {
     if (expected != actual) {
