@@ -21,12 +21,12 @@ struct Expr {
         } literal;
 
         struct Unary {
-            int op; // token type
+            Token op; // token type
             struct Expr *expr;
         } unary;
 
         struct Binary {
-            int op; // token type
+            Token op; // token type
             struct Expr *lhs;
             struct Expr *rhs;
         } binary;
