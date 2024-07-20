@@ -1,3 +1,4 @@
+#include "ascii.h"
 #define SHIFT(n) (1 << (n))
 
 #define SPACE SHIFT(1)
@@ -139,3 +140,21 @@ static int ASCII_TABLE[128] = {
     0,                       // ~ - Tilde
     0,                       // DEL - Delete
 };
+
+int ascii_space(int c) { return (ASCII_TABLE[c] & SPACE); }
+
+int ascii_alpha(int c) { return (ASCII_TABLE[c] & ALPHA); }
+
+int ascii_upper(int c) { return (ASCII_TABLE[c] & UPPER); }
+
+int ascii_lower(int c) { return (ASCII_TABLE[c] & LOWER); }
+
+int ascii_digit(int c) { return (ASCII_TABLE[c] & DIGIT); }
+
+int ascii_hex(int c) { return (ASCII_TABLE[c] & HEX); }
+
+int ascii_oct(int c) { return (ASCII_TABLE[c] & OCT); }
+
+char ascii_to_lower(char c) { return ASCII_TABLE[((int)c) - 32]; }
+
+char ascii_to_upper(char c) { return ASCII_TABLE[((int)c) + 32]; }

@@ -92,7 +92,6 @@ enum {
     TOKEN_GREATER_EQUAL,
     TOKEN_LESS_THAN,
     TOKEN_LESS_EQUAL,
-
     // Assignment
     TOKEN_ADD_ASSIGN,
     TOKEN_SUB_ASSIGN,
