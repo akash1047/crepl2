@@ -127,7 +127,7 @@ static const char TOKEN_STRING_TABLE[][9] = {
 
 const char *token_string(Token token) {
     if (token < TOKEN_FIRST || token > TOKEN_LAST) {
-        sprintf_s(TOKEN_ERROR, TOKEN_ERROR_LEN, "Token(%d)\0", token);
+        snprintf(TOKEN_ERROR, TOKEN_ERROR_LEN, "Token(%d)\0", token);
         return TOKEN_ERROR;
     }
     return TOKEN_STRING_TABLE[token];
